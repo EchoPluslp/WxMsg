@@ -1,0 +1,19 @@
+{
+  "pages":[
+    "pages/videoinfo/videoinfo",
+    "pages/index/index", 
+    "pages/userLogin/login",
+    "pages/chooseBgm/chooseBgm",
+    "pages/mine/mine",
+    "pages/userRegist/regist",
+    "pages/searchVideo/searchVideo",
+    "pages/wxSearchView/wxSearchView"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "脸笑嘻嘻",
+    "navigationBarTextStyle":"black"
+  },
+  "debug":true
+}
