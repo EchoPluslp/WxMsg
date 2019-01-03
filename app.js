@@ -2,8 +2,9 @@
 App({
   //如果使用手机4g进行调试时，我们需要配置内网穿透的地址
   //如果在同一个网段时，则配置本机地址
-  serverUrl: "http://192.168.191.1:8081",
+  serverUrl: "http://119.23.242.242/echo",
   userInfo: null,
+  appImage: "http://119.23.242.242/",
   
 //设置本地User缓存
   setGlobalUserInfo: function (user) {

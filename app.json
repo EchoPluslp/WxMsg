@@ -1,19 +1,19 @@
 {
-  "pages":[
-    "pages/videoinfo/videoinfo",
-    "pages/index/index", 
+  "pages":[  
     "pages/userLogin/login",
-    "pages/chooseBgm/chooseBgm",
+    "pages/videoinfo/videoinfo",
+    "pages/report/report",
+    "pages/index/index",  
     "pages/mine/mine",
+    "pages/chooseBgm/chooseBgm",
     "pages/userRegist/regist",
-    "pages/searchVideo/searchVideo",
-    "pages/wxSearchView/wxSearchView"
-  ],
+    "pages/searchVideo/searchVideo"
+      ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "脸笑嘻嘻",
     "navigationBarTextStyle":"black"
   },
-  "debug":true
+  "debug":false
 }

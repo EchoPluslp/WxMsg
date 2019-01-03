@@ -1,5 +1,5 @@
 // 1 导入js文件
-var WxSearch = require('../wxSearchView/wxSearchView.js');
+var WxSearch = require('../../wxSearchView/wxSearchView.js');
 
 const app = getApp()
 
@@ -9,7 +9,7 @@ Page({
 
   onLoad: function () {
     //搜索栏初始化
-    var that = this;
+    var that = this;  
     var serverUrl = app.serverUrl;
     //查询热搜词
     wx.request({
@@ -42,8 +42,9 @@ Page({
   mySearchFunction: function (value) {
     // do your job here
     // 示例：跳转
+    console.log(value);
     wx.redirectTo({
-      url: '../index/index?searchValue=' + value
+      url: '../index/index?isSaveRecord=1&searchValue=' + value
     })
   },
 
@@ -52,9 +53,8 @@ Page({
     // do your job here
     // 示例：返回 
     wx.redirectTo({
-      url: '../index/index?searchValue=返回'
+      url: '../index/index'
     })
-  }
-
+  },
 
 })

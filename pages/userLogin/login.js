@@ -8,11 +8,14 @@ Page({
     var me = this;
     var redirectUrl = params.redirectUrl;
     // debugger;
+    //获取从videoInfo页面传过来的url
     if (redirectUrl != null && redirectUrl != undefined && redirectUrl != '') {
       redirectUrl = redirectUrl.replace(/#/g, "?");
       redirectUrl = redirectUrl.replace(/@/g, "=");
       me.redirectUrl = redirectUrl;
     }
+    // console.log(params);
+    // debugger;
   },
 
   // 登录  
@@ -21,7 +24,7 @@ Page({
      var formObject = data.detail.value;
      var username   = formObject.username;
      var password   = formObject.password;
-
+  // debugger;
      if(username == null || password == null){
        wx.showToast({
          title    : '用户名和密码不能为空',
@@ -34,7 +37,7 @@ Page({
          mask : true
        });
        var serverUrl = app.serverUrl;
-       var currentUser = app.getGlobalUserInfo();
+      //  var currentUser = app.getGlobalUserInfo();
       wx.request({
         url    : serverUrl+'/login',
         method : "POST",
@@ -61,11 +64,15 @@ Page({
 //fixme 使用本地缓存在设置app的userInfo
               app.setGlobalUserInfo(res.data.data);
             //console.log(res.data);
-            console.log(app.userInfo);
+            // console.log(app.userInfo);
+            //获取到重定向来的url
             var redirectUrl = me.redirectUrl;
+            // console.log(redirectUrl);
+            // debugger;
             if (redirectUrl != null && redirectUrl != undefined && redirectUrl != '') {
               wx.redirectTo({
                 url: redirectUrl,
+                //重定向到指定的url
               })
             } else {
               wx.redirectTo({
@@ -81,7 +88,7 @@ Page({
             })
           }
         }
-      })
+      });
      }
   },
 

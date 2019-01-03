@@ -44,6 +44,7 @@ Page({
     upload: function(e) {
         var me = this;
         console.log(me);
+        debugger;
       var bgmId = e.detail.value.bgmId;
       var desc = e.detail.value.desc;
       //参数获取
@@ -72,9 +73,11 @@ Page({
         filePath: tmpVideoUrl,
         name: 'file', //与后端file文件接口对应
         header: {
-          'content-type': 'application/json' //默认值
+          'content-type': 'application/json',
+          'headerUserId': userInfo.id,
+          'headerUserToken': userInfo.userToken
         },
-        success:function(res) {
+        success:function(res)  {
           wx.hideLoading();
          var data = JSON.parse(res.data);
          if(data.status == 200){
